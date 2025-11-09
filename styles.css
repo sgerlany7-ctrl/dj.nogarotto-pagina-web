@@ -52,9 +52,7 @@ body *{
     position: relative;
     width: 80px;
     margin-top: 20px;
-    height: 40px;
-    background: var(--surface-color);
-    border-radius: 50px;
+    
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -66,7 +64,7 @@ body *{
 #switch button{
     width: 30px;
     height: 30px;
-    background: white var(--text-color)  ;
+   
    background-image: var(--switch-bg-url) ;
    background-repeat: no-repeat;
    background-position: center;
@@ -79,15 +77,19 @@ body *{
     cursor: pointer;
     display: flex;
     align-items: center;
+    animation: slide-out 0.2s forwards;
     
     
     
 }
 .light #switch button{
-    justify-content: flex-end;
-    transform: translateX(40px) translateY(-50%);
+  animation: slide-in 0.4s forwards;
 
 }
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
+}
+
 #switch span {
     display: block;
     width: 64px;
@@ -157,5 +159,22 @@ footer a {
     :root.light {
         --bg-url: url(./assetss/dj.webp);
     
+    }
+}
+/* animation */
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+} 
+@keyframes slide-out {
+    from{
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }
