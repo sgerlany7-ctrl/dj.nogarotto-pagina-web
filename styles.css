@@ -24,6 +24,7 @@
 }
 body{
     background:var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 body *{
     font-family: "Inter", sans-serif;
@@ -147,4 +148,14 @@ footer a {
     text-align: center;
     font-size: 14px;
     text-decoration:none;
+}
+/*MEDIA QUERIES*/
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assetss/dj.jpg);
+    }
+    :root.light {
+        --bg-url: url(./assetss/dj.webp);
+    
+    }
 }
