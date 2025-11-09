@@ -51,7 +51,7 @@ body *{
 #switch {
     position: relative;
     width: 80px;
-    margin-top: 20px;
+    margin: 4px auto;
     
     display: flex;
     align-items: center;
@@ -64,11 +64,11 @@ body *{
 #switch button{
     width: 30px;
     height: 30px;
-   
+   left: 0;
    background-image: var(--switch-bg-url) ;
    background-repeat: no-repeat;
    background-position: center;
-    position: absolute;
+    
    transform: translateY(-50%);
     top: 50%;
     border: none;
@@ -78,12 +78,16 @@ body *{
     display: flex;
     align-items: center;
     animation: slide-out 0.2s forwards;
+    z-index: 1;
+    
     
     
     
 }
 .light #switch button{
   animation: slide-in 0.4s forwards;
+  left: initial;
+  right: 0;
 
 }
 #switch button:hover{
